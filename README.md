@@ -73,7 +73,7 @@ The empirical framework is a **Trend–Cycle VAR (TC‑VAR)**:
 
 ## Repository Structure
 
-A typical layout for this project is:
+Layout for this project is:
 
 ```text
 .
@@ -85,10 +85,12 @@ A typical layout for this project is:
 │   ├── data_prep.py   # Data loading and transformations
 │   ├── run_tcvar.py   # Main script to estimate the model 
 │   └── plots.py       # Scripts to reproduce figures
-├── notebooks/
-│   └── *.ipynb        # Exploratory analysis, robustness checks
+├── models/
+│   |──tcvar_ar1_model.plk #Model obtained from run_tc_var.py
+    └──tcvar_ar1_results.plk #Results obtained from run_tc_var.py
+    
 ├── outputs/
-│   ├── figures/       # Replicated figures (trends, gaps, r*)
-│   └── tables/        # Summary tables, posterior statistics
+│   └── figures/       # Replicated figures (trends, gaps, r*)
+│ 
 ├── requirements.txt
 └── README.md
