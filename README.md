@@ -14,9 +14,9 @@ The goal of this project is to:
 
 - Replicate Fosso’s decomposition of US macroeconomic time series into **trend** (permanent) and **cycle** (transitory) components using a **Trend–Cycle VAR (TC‑VAR)**.
 - Recover key unobserved states:
-  - Trend output growth \( \Delta g_t^* \)
-  - Trend inflation \( \pi_t^* \)
-  - The natural rate of interest \( r_t^* \)
+  - Trend output growth \($ \Delta g_t^* $\)
+  - Trend inflation \( $\pi_t^*$ \)
+  - The natural rate of interest \( $r_t^*$ \)
   - Gaps for output, inflation, inflation expectations, nominal interest rate, and commodity prices.
 - Compare the replicated estimates to the figures reported in Fosso (2025).
 - Discuss identification, prior sensitivity, and conceptual limitations of the framework.
@@ -50,14 +50,14 @@ Main data sources:
 
 The empirical framework is a **Trend–Cycle VAR (TC‑VAR)**:
 
-- Each observed variable \( y_t \) is decomposed into a **trend** \( y_t^* \) and a **cycle** \( \tilde{y}_t \):
-  \[
-  y_t = \Lambda^* y_t^* + \tilde{y}_t
-  \]
+- Each observed variable $ y_t $ is decomposed into a **trend** $y_t^* $  and a **cycle** $ \tilde{y}_t $:
+  
+  $y_t = \Lambda^* y_t^* + \tilde{y}_t$
+  
 - Trends follow a multivariate **random walk**, capturing low‑frequency movements and structural changes.
 - Cyclical components follow a stationary **VAR(1)** process.
 - **Orthogonality assumption**: trend and cycle shocks are restricted to be uncorrelated, allowing a sharp separation between permanent and transitory components.
-- Long‑run co‑movements are pinned down by New‑Keynesian theory via the **Euler equation**, imposing structure on the loading matrix \( \Lambda^* \) and linking trend growth, trend inflation, preferences, and the natural nominal rate.
+- Long‑run co‑movements are pinned down by New‑Keynesian theory via the **Euler equation**, imposing structure on the loading matrix $ \Lambda^* $ and linking trend growth, trend inflation, preferences, and the natural nominal rate.
 
 ### State-space representation and estimation
 
@@ -67,7 +67,7 @@ The empirical framework is a **Trend–Cycle VAR (TC‑VAR)**:
 - Estimation is **Bayesian**, using a **Gibbs sampler**:
   - Conservative priors on trend innovation variances (Inverse‑Wishart), adjusted in the replication to match the volatility of published trends.
   - Minnesota‑type priors for the cycle VAR, adapted to enforce stationarity (mean‑reverting cycles).
-  - Long MCMC run with burn‑in; posterior summaries reported for trends, gaps, and \( r_t^* \).
+  - Long MCMC run with burn‑in; posterior summaries reported for trends, gaps, and $r_t^* $.
 
 ---
 
